@@ -35,9 +35,10 @@ public class Player : MonoBehaviour
 
         for (int i = 0; i < 100; i++)
         {
-            if (i % 2 == 0)
+            Debug.Log(i);
+            if ( i == 50)
             {
-                Debug.Log(i);
+                break;
             }
         }
     }
