@@ -25,14 +25,21 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("My name is: " + myName);
-        Debug.Log("My Age is: " + myAge);
-        Debug.Log("My speed is: " + mySpeed);
-        Debug.Log("My health is: " + myHealth);
-        Debug.Log("My score is: " + score);
-        Debug.Log("Has all the keys been collected? " + hasAllKeys);
-        Debug.Log("My ammo count is: " + ammoCount);
+        // Debug.Log("My name is: " + myName);
+        // Debug.Log("My Age is: " + myAge);
+        // Debug.Log("My speed is: " + mySpeed);
+        // Debug.Log("My health is: " + myHealth);
+        // Debug.Log("My score is: " + score);
+        // Debug.Log("Has all the keys been collected? " + hasAllKeys);
+        // Debug.Log("My ammo count is: " + ammoCount);
 
+        for (int i = 0; i < 100; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Debug.Log(i);
+            }
+        }
     }
 
     // Update is called once per frame
