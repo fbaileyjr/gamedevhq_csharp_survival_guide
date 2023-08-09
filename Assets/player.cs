@@ -4,16 +4,31 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    int i = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        do
+        for (int i = 0; i < 30; i++)
         {
-            Debug.Log(i);
-            i++;
-        } while (i < 50);
+            if (i < 11)
+            {
+                Debug.Log("i is: " + i);
+            }
+            else if(i > 10 && i < 21)
+            {
+                if (i % 2 == 0)
+                {
+                    Debug.Log("i is: " + i);
+                }
+            }
+            else if (i > 20)
+            {
+                if (i % 2 == 1)
+                {
+                    Debug.Log("i is: " + i);
+                }
+            }
+        }
     }
 
     // Update is called once per frame
