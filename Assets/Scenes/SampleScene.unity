@@ -251,14 +251,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   names:
   - Bubba
-  - Gump
-  items:
-  - Molly
-  - Ringwold
-  - David
-  - Copper
-  - Jordie
-  ages: 050000000400000002000000370000003f000000
+  - Batman
+  - Jerry
+  - Wolverine
+  - Buttercup
+  ages: 2000000023000000480000006700000011000000
+  cars:
+  - Mustang
+  - Camaro
+  - Cobra
+  - Chevelle
+  - Charger
 --- !u!65 &844462310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -434,14 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d9caf948c28114a973d4ddc9bfa3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names:
-  - 
-  - 
-  - 
-  items:
-  - 
-  - 
-  - 
-  - 
-  - 
-  ages: 050000000400000002000000370000003f000000
+  names: []
+  ages: 
+  cars: []

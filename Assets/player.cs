@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // declare the size (how many elements) through the inspector
+    // Create an array of 5 names and print out the last kids name
+    // Create an array of 5 ages that corospond to each kid and print out the last age
+    // Create an array of 5 car models and associate them with each kid and print out the last kids favorite car
+
+    // Bonus -- Handle the print out when the space key is pressed
+
     public string[] names;
+    public int[] ages;
+    public string[] cars;
 
-    public string[] items = new string[5];
-
-    public int[] ages = new int[] { 5, 4, 2, 55, 63 };
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(names[0]);
-        Debug.Log(items[1]);
-        Debug.Log(ages[4]);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("The last kids name is: " + names[names.Length -1]);
+            Debug.Log("The kid's age is: " + ages[ages.Length - 1]);
+            Debug.Log("The kid's favorite car is: " + cars[cars.Length - 1]);
+        }
     }
 
 }
