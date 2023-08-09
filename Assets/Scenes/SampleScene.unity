@@ -250,9 +250,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   names:
-  - 
-  - 
-  - 
+  - Bubba
+  - Gump
+  items:
+  - Molly
+  - Ringwold
+  - David
+  - Copper
+  - Jordie
+  ages: 050000000400000002000000370000003f000000
 --- !u!65 &844462310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -432,3 +438,10 @@ MonoBehaviour:
   - 
   - 
   - 
+  items:
+  - 
+  - 
+  - 
+  - 
+  - 
+  ages: 050000000400000002000000370000003f000000
