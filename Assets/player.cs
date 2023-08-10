@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int[] itemID;
     public string[] itemName;
 
 
@@ -19,13 +18,9 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            for(int i = 0; i < itemName.Length; i++)
+            foreach(var item in itemName)
             {
-                if (itemName[i] == "sword")
-                {
-                    Debug.Log("Item name is: sword");
-                    Debug.Log("Item ID is: " + i);
-                }
+                Debug.Log(item);
             }
         }
     }
