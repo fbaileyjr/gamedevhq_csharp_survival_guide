@@ -155,7 +155,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d9caf948c28114a973d4ddc9bfa3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apples: 0
+  names:
+  - Bubba
+  - Gump
+  - Cowboy
+  - Humpty
+  - Dumpty
+  ages: 0500000011000000530000006700000022000000
+  cars:
+  - Camaro
+  - Mustang
+  - Charger
+  - Chevelle
+  - Impala
 --- !u!65 &362627900
 BoxCollider:
   m_ObjectHideFlags: 0

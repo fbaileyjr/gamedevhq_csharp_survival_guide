@@ -13,12 +13,13 @@ public class Player : MonoBehaviour
     public string[] names;
     public int[] ages;
     public string[] cars;
+    private int _random;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -26,9 +27,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            Debug.Log("The last kids name is: " + names[names.Length -1]);
-            Debug.Log("The kid's age is: " + ages[ages.Length - 1]);
-            Debug.Log("The kid's favorite car is: " + cars[cars.Length - 1]);
+            _random = Random.Range(0, names.Length);
+            Debug.Log("Random number is: " + _random);
+            Debug.Log("The last kids name is: " + names[_random]);
+            Debug.Log("The kid's age is: " + ages[_random]);
+            Debug.Log("The kid's favorite car is: " + cars[_random]);
         }
     }
 
