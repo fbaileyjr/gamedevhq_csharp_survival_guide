@@ -249,19 +249,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d9caf948c28114a973d4ddc9bfa3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names:
-  - Bubba
-  - Batman
-  - Jerry
-  - Wolverine
-  - Buttercup
-  ages: 2000000023000000480000006700000011000000
-  cars:
-  - Mustang
-  - Camaro
-  - Cobra
-  - Chevelle
-  - Charger
+  myItems:
+  - itemID: 0
+    name: 1
+    description: s2ord
+  - itemID: 1
+    name: sword
+    description: This is a magical sword
+  - itemID: 2
+    name: bread
+    description: You can eat this bread
+  - itemID: 3
+    name: cape
+    description: wonderful looking cape
+  - itemID: 4
+    name: spear
+    description: It has a blue gem for a spearhead
 --- !u!65 &844462310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -437,6 +440,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d9caf948c28114a973d4ddc9bfa3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  names: []
-  ages: 
-  cars: []
+  myItems: []
