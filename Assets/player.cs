@@ -17,9 +17,9 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            foreach (var cube in cubes)
+            for( int i = 0; i < cubes.Length; i++)
             {
-                cube.GetComponent<MeshRenderer>().material.color = Color.red;
+                cubes[i].GetComponent<MeshRenderer>().material.color = Color.red;
             }
         }
     }
