@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject[] cubes;
+    public int health;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start()");
-        MyMethod();
-        Debug.Log("Completed calling MyMethod");
+
         
     }
 
+    public void Damage(int damageAmount)
+    {
+        health -= damageAmount;
+
+        if (health < 1)
+        {
+            health = 0;
+            Destroy(this.gameObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Damage(5);
+        }
     }
 
-    private void MyMethod()
-    {
-        Debug.Log("MyMethod()");
-    }
 }
