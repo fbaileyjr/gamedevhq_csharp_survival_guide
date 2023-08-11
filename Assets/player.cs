@@ -9,18 +9,20 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Start()");
+        MyMethod();
+        Debug.Log("Completed calling MyMethod");
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            for( int i = 0; i < cubes.Length; i++)
-            {
-                cubes[i].GetComponent<MeshRenderer>().material.color = Color.red;
-            }
-        }
+
+    }
+
+    private void MyMethod()
+    {
+        Debug.Log("MyMethod()");
     }
 }
