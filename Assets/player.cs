@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject[] players;
+    // create an array of 5 different positions and use a custom method to generate a random index, and then use a custom
+    // method to set the position to that sub index
+
+    public Vector3[] randomPositions;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        players = GetAllPlayers();
-
+        updatePosition(randomPositions[randomIndex(randomPositions.Length)]);
     }
     // Update is called once per frame
     void Update()
@@ -19,16 +20,15 @@ public class Player : MonoBehaviour
         
     }
 
-    GameObject[] GetAllPlayers()
+    int randomIndex(int length)
     {
-        GameObject[] allPlayers = GameObject.FindGameObjectsWithTag("Player");
-
-        foreach (var p in allPlayers)
-        {
-            p.GetComponent<MeshRenderer>().material.color = new Color(Random.value, Random.value, Random.value);
-        }
-
-        return allPlayers;
+        return Random.Range(0, length);
     }
 
+    void updatePosition(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
+  
 }
