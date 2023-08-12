@@ -4,33 +4,43 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Create a program that checks if the player is dead or not. When you the space key, you should damage
+    // the player by a random amount. If the player is dead (health less than 1), print out "The player has died!"
+
+    // Bonus: Prevent the damge function from being called once player is dead and no negative health values
+
+    public int health = 100;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = ReturnPosition(0, 0, 0);
+
 
 
     }
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space) && IsDead() == false)
+        {
+            Damage(Random.Range(5, 20));
+        }
     }
 
-    public void ChangePosition(Vector3 pos)
+    public void Damage(int damageAmount)
     {
-        transform.position = pos;
+        health -= damageAmount;
+
+        if (IsDead() == true)
+        {
+            health = 0;
+            Debug.Log("The player has died!");
+        }
     }
 
-    public Vector3 GetPosition()
+    public bool IsDead()
     {
-        return Vector3.zero;
+        return health < 1;
     }
 
-    public Vector3 ReturnPosition(float x, float y, float z)
-    {
-        Vector3 pos = new Vector3(x, y, z);
-        return pos;
-    }
 }
