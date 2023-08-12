@@ -4,25 +4,33 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int total;
-    public int total2;
 
     // Start is called before the first frame update
     void Start()
     {
-        total = Sum(5, 2);
-        total2 = Sum(11, 7);
-        
+        transform.position = ReturnPosition(0, 0, 0);
+
+
     }
     // Update is called once per frame
     void Update()
     {
+
     }
 
-    private int Sum(int a, int b)
+    public void ChangePosition(Vector3 pos)
     {
-        Debug.Log(a + b);
-        return a + b;
+        transform.position = pos;
     }
 
+    public Vector3 GetPosition()
+    {
+        return Vector3.zero;
+    }
+
+    public Vector3 ReturnPosition(float x, float y, float z)
+    {
+        Vector3 pos = new Vector3(x, y, z);
+        return pos;
+    }
 }
