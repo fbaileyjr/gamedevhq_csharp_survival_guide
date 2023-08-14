@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColorChange : MonoBehaviour
 {
     private MeshRenderer _render;
+    private WaitForSeconds _changeColorWait = new WaitForSeconds(3.0f);
     IEnumerator Start()
     {
         _render = GetComponent<MeshRenderer>();
@@ -18,7 +19,7 @@ public class ColorChange : MonoBehaviour
 
     IEnumerator ColorChangeRoutine ()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return _changeColorWait;
         _render.material.color = NewColor();
     }
 
