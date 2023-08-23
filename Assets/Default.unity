@@ -152,6 +152,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeff1a6506d274c468024c1fe512cfad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customers:
+  - FirstName: Jackie
+    LastName: Chane
+    Age: 58
+    Gender: Male
+    Occupation: Action Star
+  - FirstName: Kaley
+    LastName: Beckman
+    Age: 22
+    Gender: Female
+    Occupation: Awesomeness
+  - FirstName: The
+    LastName: Thing
+    Age: 233
+    Gender: Neither
+    Occupation: Raging Alien
 --- !u!4 &279253919
 Transform:
   m_ObjectHideFlags: 0
