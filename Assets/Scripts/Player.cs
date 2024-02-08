@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            UtilityHelper.CreateObject();
+            UtilityHelper.ChangeRandomColor(this.gameObject);
         }
 
         if (Input.GetKeyDown(KeyCode.E))

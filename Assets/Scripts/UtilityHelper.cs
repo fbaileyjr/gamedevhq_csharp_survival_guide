@@ -17,4 +17,8 @@ public static class UtilityHelper
         obj.transform.position = Vector3.zero;
     }
 
+    public static void ChangeRandomColor(GameObject obj)
+    {
+        obj.transform.GetComponent<Renderer>().material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
+    }
 }
