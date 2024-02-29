@@ -5,29 +5,33 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    private bool isGameOver;
+    public bool IsGameOver { get; private set; }
+    //private bool isGameOver;
 
-    public bool IsGameOver
-    {
-        get
-        {
-            return isGameOver;
-        }
-        set
-        {
-            if (value == true)
-            {
-                Debug.Log("Oh no! The game is over!");
-            }
-            isGameOver = value;
-        }
-    }
+    //public bool IsGameOver
+    //{
+    //   get
+    //  {
+    //        return isGameOver;
+        //}
+        //set
+        //{
+        //    if (value == true)
+        //    {
+        //        Debug.Log("Oh no! The game is over!");
+        //    }
+        //    isGameOver = value;
+        //}
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
-        isGameOver = false;
-        
+        IsGameOver = false;
+        if (IsGameOver)
+        {
+            Debug.Log("Game Over");
+        }
     }
 
     // Update is called once per frame
