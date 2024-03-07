@@ -2,10 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Test
+{
+    GameManager gm = new GameManager();
+    public Test()
+    {
+    }
+}
+
+
 public class GameManager : MonoBehaviour
 {
 
     public bool IsGameOver { get; private set; }
+
+    private float _speed;
+
+    public float Speed
+    {
+        get
+        {
+            return _speed;
+        }
+        private set
+        {
+            _speed = value;
+        }
+    }
+
+    private string _name;
+    public string Name { get; set; }
+
     //private bool isGameOver;
 
     //public bool IsGameOver
@@ -27,11 +54,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IsGameOver = false;
-        if (IsGameOver)
-        {
-            Debug.Log("Game Over");
-        }
+        Speed = 10f;
+        Debug.Log(Speed);
     }
 
     // Update is called once per frame
