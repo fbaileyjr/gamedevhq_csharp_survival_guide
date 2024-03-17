@@ -14,10 +14,15 @@ public class GameManager : MonoBehaviour
     //array
     //public GameObject[] objectsToSpawn = new GameObject[10];
 
-    // Challenge: Create a list of names and print out each one
-    // When you hit the space key, "Remove" a random element from the list and re-print the names
+    // Challenge: Create a list/array of 3 gameObjects to spawn and randomly spawn with a random position on the screen
+    // betwee -10 and +10 on the x/y when you hit the space key. 
+    // Every object you spawn should be stored into a list called objectsCreated. 
+    // When you have spawn 10 objects, you will no longer be able to spawn object and will turn
+    // all objects created GREEN and then CLEAR the list
 
-    public List<string> Names = new List<string>();
+    public GameObject[] objectsToSpawn = new GameObject[3];
+    public List<GameObject> objectsCreated = new List<GameObject>();
+    public int SpawnCount = 0;
 
     private void Start()
     {
@@ -27,36 +32,27 @@ public class GameManager : MonoBehaviour
         // accessing the objects are the same
         //objectsToSpawn[2].name = "Frank";
 
-        Names.Add("Bubba");
-        Names.Add("Cat");
-        Names.Add("Dog");
-        Names.Add("LemonLime");
-        Names.Add("Tex");
-        Names.Add("T-Rex");
-        Names.Add("CondorMan");
-        Names.Add("Courage the Cowardly Dog");
-        Names.Add("Sting");
-        Names.Add("Player One");
-        Debug.Log("The length of the list is: " + Names.Count);
-        foreach(string x in Names)
-        {
-            Debug.Log("The name is: " + x);
-        }
     }
 
     private void Update()
-    { 
-        if (Names.Count > 0 && Input.GetKeyDown(KeyCode.Space))
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && SpawnCount < 10)        
         {
-            var nameToRemove = Names[Random.Range(0, Names.Count)];
-            Names.Remove(nameToRemove);
-            foreach (string x in Names)
+            Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+            objectsCreated.Add(Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Length)], randomPosition, transform.rotation));
+            SpawnCount++;
+        }
+
+        if (SpawnCount == 10)
+        {
+            // turn all objects green
+            // clear list
+            foreach (GameObject x in objectsCreated)
             {
-                Debug.Log("The name is: " + x);
+                var objectRenderer = x.GetComponent<Renderer>();
+                objectRenderer.material.SetColor("_Color", Color.green);
             }
-            Debug.Log("The length of the list is: " + Names.Count);
-            Debug.Log("The name removed from the list is: " + nameToRemove);
+            objectsCreated.Clear();
         }
     }
-
 }
